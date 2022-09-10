@@ -32,3 +32,15 @@ console.log(obj.fullName());
 
 // NOTE : When a JavaScript variable is declared with the keyword "new", the variable is created as an object,
 // It slows down the execution speed of them
+
+Object.entries(obj).map((item, idx) => {
+  console.log(item[1], idx);
+});
+
+Object.seal(obj);
+obj.Age = 1000;
+console.log(obj);
+
+Object.freeze(obj);
+obj.Age = 2000;
+console.log(obj);
