@@ -1,4 +1,4 @@
-## Time Complexity of Stack methods
+## Time Complexity of Queue methods
 
 - Insert - O(1)
 - Remove - O(1)
