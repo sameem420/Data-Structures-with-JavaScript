@@ -73,7 +73,7 @@ class LinkedList {
     this.size--;
     return removeNode.value;
   }
-  // removed given value from the list
+  // removes given value from the list
   removeValue(value) {
     if (this.isEmpty()) {
       console.log("List is empty!");
@@ -96,6 +96,36 @@ class LinkedList {
       return null;
     }
   }
+  // Searches a value in a node
+  search(value) {
+    if (this.isEmpty()) {
+      console.log("List is empty");
+      return -1;
+    }
+    let i = 0;
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        return i;
+      }
+      current = current.next;
+      i++;
+    }
+    return -1;
+  }
+  // Reverse the list
+  reverse() {
+    let previous = null;
+    let current = this.head;
+    while (current) {
+      let next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+    }
+    this.head = previous;
+  }
+  // Prints all the node values in list
   print() {
     if (this.isEmpty()) {
       console.log("List is empty!");
@@ -124,11 +154,8 @@ list.insert(10, 1);
 list.insert(20, 2);
 list.insert(50, 3);
 list.print();
-list.removeFrom(5);
-list.print();
-list.removeFrom(2);
-list.print();
-list.removeValue(50);
+console.log("Element found at position : ", list.search(20));
+list.reverse();
 list.print();
 console.log("List size = ", list.getSize());
 
