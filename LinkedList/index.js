@@ -96,7 +96,7 @@ class LinkedList {
       return null;
     }
   }
-  // Searches a value in a node
+  // Searches a value (from each node) in the list
   search(value) {
     if (this.isEmpty()) {
       console.log("List is empty");
