@@ -1,2 +1,2 @@
-# DSA
-DSA with JavaScript
+# Data Structures
+Data Structures with JavaScript
