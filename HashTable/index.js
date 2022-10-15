@@ -57,24 +57,6 @@ class HashTable {
       }
     }
   }
-
-  // Searches a value (from each node) in the list
-  search(value) {
-    if (this.isEmpty()) {
-      console.log("List is empty");
-      return -1;
-    }
-    let i = 0;
-    let current = this.head;
-    while (current) {
-      if (current.value === value) {
-        return i;
-      }
-      current = current.next;
-      i++;
-    }
-    return -1;
-  }
   // Prints all the values in table
   display() {
     for (let i = 0; i < this.table.length; i++) {
@@ -93,3 +75,5 @@ table.display();
 console.log(table.get("name"));
 table.remove("name");
 table.display();
+console.log("HashTable is empty ? ", table.isEmpty());
+console.log("HashTable size = ", table.getSize());
