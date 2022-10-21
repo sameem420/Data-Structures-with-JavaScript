@@ -1,4 +1,4 @@
-## Time Complexity of Tree methods
+## Time Complexity of Binary Search Tree (BST) methods
 
 - Insert - O(1)
 - Remove - O(1)
